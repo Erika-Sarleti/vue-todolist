@@ -18,6 +18,10 @@ Bonus:
 const app = new Vue({
     el: '#app' ,
     data: {
+        newTodo:{
+            text:'',
+            done: false,
+        },
         todoList: [
             {
                 text:'Fare l\'esercizio',
@@ -36,7 +40,10 @@ const app = new Vue({
     },
     methods: {
         deleteTodo(index){
-            this.todoList.splice(this.todoList.length - 1, );
+            this.todoList.splice(index, 1);
+        },
+        addTodo(){
+            this.todoList.push(this.newTodo);
         }
     }
 })
