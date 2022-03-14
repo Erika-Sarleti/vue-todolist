@@ -16,8 +16,8 @@
             <button @click="addTodo" class="btn-task" >Aggiungi</button>
         </div>
         <ul class="bottom-application">
-            <li v-for="(element, index) in todoList" @click="toggleItem(element)" class="task" :class=" todoList[index].done == true ? 'done-line' : '' ">
-               <span >{{element.text}}</span> 
+            <li v-for="(element, index) in todoList"  class="task" :class=" todoList[index].done == true ? 'done-line' : '' ">
+               <div class="text" @click="toggleItem(element)">{{element.text}}</div> 
                 <div role="button" @click="deleteTodo(index)"><i class="fa-solid fa-xmark"></i></div>
             </li>
         </ul>

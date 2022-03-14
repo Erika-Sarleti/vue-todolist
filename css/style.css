@@ -50,6 +50,9 @@ html{
     border-bottom: 1px solid #dadee1 ;
     cursor: pointer;
 }
+.text{
+    width: 100%;
+}
 
 .done-line{
     text-decoration: line-through;
