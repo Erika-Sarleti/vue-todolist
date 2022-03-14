@@ -11,11 +11,11 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" name="new-todo" id="new-todo " v-model="newTodo.text" placeholder="Aggiungi un elemento">
-        <button @click="addTodo">Aggiungi</button>
+        <input type="text" name="new-todo" id="new-todo" @keyup.enter="addTodo" v-model="newTodo" placeholder="Aggiungi un elemento">
+        <button @click="addTodo" >Aggiungi</button>
         <ul>
-            <li v-for="(element, index) in todoList" :class=" todoList[index].done == true ? 'done-line' : '' ">
-               <span>{{element.text}}</span> 
+            <li v-for="(element, index) in todoList" @click="toggleItem" :class=" todoList[index].done == true ? 'done-line' : '' ">
+               <span >{{element.text}}</span> 
                 <button @click="deleteTodo(index)"><i class="fa-solid fa-xmark"></i></button>
             </li>
         </ul>
