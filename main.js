@@ -44,11 +44,11 @@ const app = new Vue({
                 this.newTodo='';
             }
         },
-        toggleItem(){
-            if (this.todoList.done == true){
-                this.todoList.done = false;
+        toggleItem(element){
+            if (element.done == true){
+                element.done = false;
             }else{
-                this.todoList.done = true;
+                element.done = true;
             }
         }
     }
